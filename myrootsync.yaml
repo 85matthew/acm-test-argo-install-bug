@@ -1,0 +1,13 @@
+apiVersion: configsync.gke.io/v1alpha1
+kind: RootSync
+metadata:
+  name: my-root-sync
+  namespace: config-management-system
+spec:
+  sourceType: git
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/85matthew/acm-test-argo-install-bug.git
+    revision: HEAD
+    branch: main
+    auth: none
